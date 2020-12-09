@@ -1,0 +1,2 @@
+include ':flipper-ktp', ':toothpick-sample'
+rootProject.name = "Flipper Ktp"

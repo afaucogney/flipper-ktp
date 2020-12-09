@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: toothpick-parent.toothpick-testing.toothpick-testing-3.1.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../toothpick-testing/build/libs/toothpick-testing-3.1.1-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

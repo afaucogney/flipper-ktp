@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../toothpick-compiler/build/libs/toothpick-compiler-3.1.1-SNAPSHOT.jar" />
+          <entry name="$PROJECT_DIR$/../toothpick/build/libs/toothpick-3.1.1-SNAPSHOT.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup/javapoet/1.11.1/210e69f58dfa76c5529a303913b4a30c2bfeb76b/javapoet-1.11.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.1.0/e3a6fb2f40e3a3842e6b7472628ba4ce416ea4c8/annotation-1.1.0.jar" />
+        </processorPath>
+        <module name="toothpick-parent.toothpick-testing-junit5" />
+        <module name="toothpick-parent.toothpick-testing-junit4" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="toothpick-parent.toothpick" target="1.7" />
+      <module name="toothpick-parent.toothpick-compiler" target="1.7" />
+      <module name="toothpick-parent.toothpick-javax-annotations" target="1.7" />
+      <module name="toothpick-parent.toothpick-runtime" target="1.7" />
+      <module name="toothpick-parent.toothpick-testing" target="1.7" />
+      <module name="toothpick-parent.toothpick-testing-junit4" target="1.7" />
+      <module name="toothpick-parent.toothpick-testing-junit5" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,224 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:2:1-26:12
+MERGED from [:smoothie-lifecycle-ktp] /Users/afaucogney/Documents/archi/git/toothpick/smoothie-lifecycle-ktp/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:smoothie-lifecycle-viewmodel-ktp] /Users/afaucogney/Documents/archi/git/toothpick/smoothie-lifecycle-viewmodel-ktp/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:smoothie-androidx] /Users/afaucogney/Documents/archi/git/toothpick/smoothie-androidx/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.material:material:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/8553df58a6deaeeb0ab91f0bf056955d/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/69eb64d7cc28a154867e94b721ef4dc0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/cdb294614b591e7fa62eca838c545969/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/d22e2433bbd658fbee0d3cf8d22ac2a5/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/9f4915fac10c428e0647d1376468ef4f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/3c806c37573b12b62463a4db141200e3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/f370f0d3d4c3af1a9a7357342fe785ac/AndroidManifest.xml:17:1-22:12
+MERGED from [:smoothie-lifecycle] /Users/afaucogney/Documents/archi/git/toothpick/smoothie-lifecycle/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:smoothie-lifecycle-viewmodel] /Users/afaucogney/Documents/archi/git/toothpick/smoothie-lifecycle-viewmodel/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:smoothie] /Users/afaucogney/Documents/archi/git/toothpick/smoothie/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.fragment:fragment:1.2.0-alpha01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/0799c5e14ff2f3047024af756dde3142/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/320b8c7d719805fceee0a213e136f02a/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/ea31a851a64089f01aedd5026db5d04c/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.1.0-alpha01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/378e5d214f77de51e1bd8edebc5c1ab4/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/f8554eda42be41c184e261a9ab0cd9b4/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/8ddea9a5879c39172de9d983b4a71025/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/19b557bcf7b66e92ff186ca6a0f047e3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/070eed8e9e2dde90789a767c66adc2f0/AndroidManifest.xml:17:1-32:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/fe57c4141b3431e7348548d0818e69df/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/a3054a08620fd4ade6f18a0ff7d3fe02/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/50eff771bf7542a22d6f0df6370c9e8d/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/21f1750871da9e5e6f592ae8b6b31158/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/f5d2120c00885e405ec4d6c2e58c9e68/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/14ac2ed3682a7637cbd2aa558b0bcad7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/0b3b935257cf67338f6597ce0f7cdb70/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/ecce1e657b86607560361278ebdf8452/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0-rc01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/ed15c667ef5bc48bc40f6ac7e94ef44d/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/fd51fec66ca6699853dcca7bc7b1426d/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/44536412082ded64010859dc24eecf68/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/b897484620778f094bead47789e876b1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0-rc01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/3ed6f67b1ff7a6cd095d0d53b57846ec/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0-rc01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/a7821a1e5500774a1c19c5a64af1f5f8/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/597a27a366fe4504d5926ec606363c20/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/aac021648ab7a186b4f231744982758e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/6ae7b5fc892cefe9a35a86e3042c96d3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/b8dcc8ec449599a3c3773c6c435c4fb7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-rc01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/d3eb4fe08f2f93296d8e1e9f0036ef3f/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/d6810530a8f606cd3101aea2285cf611/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:2:1-26:12
+	package
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:4:5-36
+		INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml
+		INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:2:1-26:12
+		INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:2:1-26:12
+		INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:6:3-25:17
+MERGED from [com.google.android.material:material:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/8553df58a6deaeeb0ab91f0bf056955d/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/8553df58a6deaeeb0ab91f0bf056955d/AndroidManifest.xml:22:5-20
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/cdb294614b591e7fa62eca838c545969/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/cdb294614b591e7fa62eca838c545969/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/070eed8e9e2dde90789a767c66adc2f0/AndroidManifest.xml:24:5-30:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/070eed8e9e2dde90789a767c66adc2f0/AndroidManifest.xml:24:5-30:19
+MERGED from [androidx.core:core:1.1.0-rc01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/ed15c667ef5bc48bc40f6ac7e94ef44d/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0-rc01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/ed15c667ef5bc48bc40f6ac7e94ef44d/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-rc01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/d3eb4fe08f2f93296d8e1e9f0036ef3f/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-rc01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/d3eb4fe08f2f93296d8e1e9f0036ef3f/AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0-rc01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/ed15c667ef5bc48bc40f6ac7e94ef44d/AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:9:7-39
+	android:fullBackupContent
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:8:7-40
+	tools:ignore
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:12:7-85
+	android:allowBackup
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:7:7-34
+	android:theme
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:11:7-51
+	android:name
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:10:7-42
+activity#com.example.toothpick.activity.MainActivity
+ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:14:5-19:16
+	android:name
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:14:15-52
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:15:7-18:23
+action#android.intent.action.MAIN
+ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:16:9-61
+	android:name
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:16:17-58
+category#android.intent.category.LAUNCHER
+ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:17:9-69
+	android:name
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:17:19-66
+activity#com.example.toothpick.activity.SimpleBackpackItemsActivity
+ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:21:5-70
+	android:name
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:21:15-67
+activity#com.example.toothpick.activity.AdvancedBackpackItemsActivity
+ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:22:5-72
+	android:name
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:22:15-69
+activity#com.example.toothpick.activity.AddNewActivity
+ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:23:5-57
+	android:name
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml:23:15-54
+uses-sdk
+INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml
+INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml
+MERGED from [:smoothie-lifecycle-ktp] /Users/afaucogney/Documents/archi/git/toothpick/smoothie-lifecycle-ktp/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:smoothie-lifecycle-ktp] /Users/afaucogney/Documents/archi/git/toothpick/smoothie-lifecycle-ktp/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:smoothie-lifecycle-viewmodel-ktp] /Users/afaucogney/Documents/archi/git/toothpick/smoothie-lifecycle-viewmodel-ktp/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:smoothie-lifecycle-viewmodel-ktp] /Users/afaucogney/Documents/archi/git/toothpick/smoothie-lifecycle-viewmodel-ktp/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:smoothie-androidx] /Users/afaucogney/Documents/archi/git/toothpick/smoothie-androidx/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:smoothie-androidx] /Users/afaucogney/Documents/archi/git/toothpick/smoothie-androidx/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.material:material:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/8553df58a6deaeeb0ab91f0bf056955d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/8553df58a6deaeeb0ab91f0bf056955d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/69eb64d7cc28a154867e94b721ef4dc0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/69eb64d7cc28a154867e94b721ef4dc0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/cdb294614b591e7fa62eca838c545969/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/cdb294614b591e7fa62eca838c545969/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/d22e2433bbd658fbee0d3cf8d22ac2a5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/d22e2433bbd658fbee0d3cf8d22ac2a5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/9f4915fac10c428e0647d1376468ef4f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/9f4915fac10c428e0647d1376468ef4f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/3c806c37573b12b62463a4db141200e3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/3c806c37573b12b62463a4db141200e3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/f370f0d3d4c3af1a9a7357342fe785ac/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/f370f0d3d4c3af1a9a7357342fe785ac/AndroidManifest.xml:20:5-44
+MERGED from [:smoothie-lifecycle] /Users/afaucogney/Documents/archi/git/toothpick/smoothie-lifecycle/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:smoothie-lifecycle] /Users/afaucogney/Documents/archi/git/toothpick/smoothie-lifecycle/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:smoothie-lifecycle-viewmodel] /Users/afaucogney/Documents/archi/git/toothpick/smoothie-lifecycle-viewmodel/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:smoothie-lifecycle-viewmodel] /Users/afaucogney/Documents/archi/git/toothpick/smoothie-lifecycle-viewmodel/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:smoothie] /Users/afaucogney/Documents/archi/git/toothpick/smoothie/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:smoothie] /Users/afaucogney/Documents/archi/git/toothpick/smoothie/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.2.0-alpha01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/0799c5e14ff2f3047024af756dde3142/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.0-alpha01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/0799c5e14ff2f3047024af756dde3142/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/320b8c7d719805fceee0a213e136f02a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/320b8c7d719805fceee0a213e136f02a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/ea31a851a64089f01aedd5026db5d04c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/ea31a851a64089f01aedd5026db5d04c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.1.0-alpha01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/378e5d214f77de51e1bd8edebc5c1ab4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0-alpha01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/378e5d214f77de51e1bd8edebc5c1ab4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/f8554eda42be41c184e261a9ab0cd9b4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/f8554eda42be41c184e261a9ab0cd9b4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/8ddea9a5879c39172de9d983b4a71025/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/8ddea9a5879c39172de9d983b4a71025/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/19b557bcf7b66e92ff186ca6a0f047e3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/19b557bcf7b66e92ff186ca6a0f047e3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/070eed8e9e2dde90789a767c66adc2f0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/070eed8e9e2dde90789a767c66adc2f0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/fe57c4141b3431e7348548d0818e69df/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/fe57c4141b3431e7348548d0818e69df/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/a3054a08620fd4ade6f18a0ff7d3fe02/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/a3054a08620fd4ade6f18a0ff7d3fe02/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/50eff771bf7542a22d6f0df6370c9e8d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/50eff771bf7542a22d6f0df6370c9e8d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/21f1750871da9e5e6f592ae8b6b31158/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/21f1750871da9e5e6f592ae8b6b31158/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/f5d2120c00885e405ec4d6c2e58c9e68/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/f5d2120c00885e405ec4d6c2e58c9e68/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/14ac2ed3682a7637cbd2aa558b0bcad7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/14ac2ed3682a7637cbd2aa558b0bcad7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/0b3b935257cf67338f6597ce0f7cdb70/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/0b3b935257cf67338f6597ce0f7cdb70/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/ecce1e657b86607560361278ebdf8452/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/ecce1e657b86607560361278ebdf8452/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0-rc01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/ed15c667ef5bc48bc40f6ac7e94ef44d/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0-rc01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/ed15c667ef5bc48bc40f6ac7e94ef44d/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/fd51fec66ca6699853dcca7bc7b1426d/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/fd51fec66ca6699853dcca7bc7b1426d/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/44536412082ded64010859dc24eecf68/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/44536412082ded64010859dc24eecf68/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/b897484620778f094bead47789e876b1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/b897484620778f094bead47789e876b1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0-rc01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/3ed6f67b1ff7a6cd095d0d53b57846ec/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0-rc01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/3ed6f67b1ff7a6cd095d0d53b57846ec/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0-rc01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/a7821a1e5500774a1c19c5a64af1f5f8/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0-rc01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/a7821a1e5500774a1c19c5a64af1f5f8/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/597a27a366fe4504d5926ec606363c20/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/597a27a366fe4504d5926ec606363c20/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/aac021648ab7a186b4f231744982758e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/aac021648ab7a186b4f231744982758e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/6ae7b5fc892cefe9a35a86e3042c96d3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/6ae7b5fc892cefe9a35a86e3042c96d3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/b8dcc8ec449599a3c3773c6c435c4fb7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/b8dcc8ec449599a3c3773c6c435c4fb7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-rc01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/d3eb4fe08f2f93296d8e1e9f0036ef3f/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-rc01] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/d3eb4fe08f2f93296d8e1e9f0036ef3f/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/d6810530a8f606cd3101aea2285cf611/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/d6810530a8f606cd3101aea2285cf611/AndroidManifest.xml:20:5-44
+INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml
+INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml
+		INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml
+		ADDED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml
+		INJECTED from /Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/src/main/AndroidManifest.xml
+provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/070eed8e9e2dde90789a767c66adc2f0/AndroidManifest.xml:25:9-29:43
+	android:authorities
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/070eed8e9e2dde90789a767c66adc2f0/AndroidManifest.xml:27:13-69
+	android:multiprocess
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/070eed8e9e2dde90789a767c66adc2f0/AndroidManifest.xml:29:13-40
+	android:exported
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/070eed8e9e2dde90789a767c66adc2f0/AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0-alpha02] /Users/afaucogney/.gradle/caches/transforms-2/files-2.1/070eed8e9e2dde90789a767c66adc2f0/AndroidManifest.xml:26:13-79
