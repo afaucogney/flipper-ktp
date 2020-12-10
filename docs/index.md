@@ -1,17 +1,15 @@
-# Welcome to MkDocs
+# Welcome to Flipper Ktp
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Flipper Ktp is plugin for [Flipper](https://fbflipper.com/) to analyse [Toothpick](https://github.com/stephanenicolas/toothpick) DI (aka KTP) runtime scope tree.
 
-## Commands
+<p align="center">
+<img src="images/screenshot-0.1.png" />
+</p>
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+Flipper Ktp plugin give you a unique runtime experience to see the toothpick scope tree of your running app.
 
-## Project layout
+<p align="center">
+<img src="images/Dolphin-Automatic-Toothpick-Holder.gif" width="300" />
+</p>
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+[Get started!](getting_started.md)

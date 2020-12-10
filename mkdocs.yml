@@ -33,7 +33,7 @@ theme:
     repo: fontawesome/brands/github
   favicon: 'images/logo.jpg'
   palette:
-    primary: 'deep-amber'
+    primary: 'deep-blue'
     accent: 'deep-amber'
   features:
     - tabs
@@ -73,12 +73,12 @@ nav:
       - 'Code recipes': recipes.md
       - 'FAQ': faq.md
       - 'Support': support.md
-      - 'Stack Overflow ⏏': https://stackoverflow.com/questions/tagged/toothpick?sort=active
-#      - 'Contributing':
+      - 'Stack Overflow ⏏': https://stackoverflow.com/questions/tagged/toothpick-di?sort=active
+      - 'Contributing':
 #          - 'Code of Conduct': code_of_conduct.md
-#          - 'Dev Environment': dev-env.md
-#          - 'Releasing': releasing.md
-#          - 'How to help': how_to_help.md
+          - 'Dev Environment': dev-env.md
+          - 'Releasing': releasing.md
+          - 'How to help': how_to_help.md
 #  - 'Flipper Ktp Api':
 #      - 'KtpFlipperPlugin': api/leakcanary-android-core/leakcanary/index.md
   - 'Change Log': changelog.md
