@@ -54,6 +54,10 @@ android {
             returnDefaultValues = true
         }
     }
+
+    configurations.all {
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }
 }
 
 repositories {
