@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: toothpick-parent.toothpick-compiler.toothpick-compiler-3.1.1-SNAPSHOT">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../toothpick-compiler/build/libs/toothpick-compiler-3.1.1-SNAPSHOT.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

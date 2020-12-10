@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.toothpick">
 
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
   <application
       android:allowBackup="false"
       android:fullBackupContent="false"
@@ -21,6 +24,9 @@
     <activity android:name=".activity.SimpleBackpackItemsActivity" />
     <activity android:name=".activity.AdvancedBackpackItemsActivity" />
     <activity android:name=".activity.AddNewActivity" />
+
+    <activity android:name="com.facebook.flipper.android.diagnostics.FlipperDiagnosticActivity"
+        android:exported="true"/>
 
   </application>
 </manifest>

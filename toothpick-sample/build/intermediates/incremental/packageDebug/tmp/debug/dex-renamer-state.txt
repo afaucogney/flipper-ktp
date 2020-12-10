@@ -1,4 +1,0 @@
-#Mon Nov 30 21:23:38 CET 2020
-base.0=/Users/afaucogney/Documents/archi/git/toothpick/toothpick-sample/build/intermediates/transforms/dexMerger/debug/0
-path.0=classes.dex
-renamed.0=classes.dex

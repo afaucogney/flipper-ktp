@@ -60,6 +60,7 @@ repositories {
     google()
     jcenter()
     maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -80,6 +81,11 @@ dependencies {
     // Kotlin
     implementation deps.kotlin_runtime
 
+    // Flipper
+    implementation deps.flipper_core
+    implementation deps.flipper_soloader
+    implementation deps.flipper_reflect
+
     // Testing
     testRuntimeOnly deps.junit5_engine
     testImplementation deps.junit5_api
@@ -88,4 +94,7 @@ dependencies {
     testImplementation deps.kluent
     testImplementation deps.truth
     testImplementation deps.tp_testing_junit5
+
+    //    implementation project(':flipper-ktp')
+    implementation 'com.github.afaucogney:flipper-ktp:master-SNAPSHOT'
 }
