@@ -20,6 +20,7 @@ class KtpFlipperPlugin : FlipperPlugin {
     ///////////////////////////////////////////////////////////////////////////
 
     private var connection: FlipperConnection? = null
+    private var nodeId = 0
 
     ///////////////////////////////////////////////////////////////////////////
     // SPECIALIZATION
@@ -31,17 +32,23 @@ class KtpFlipperPlugin : FlipperPlugin {
 
     override fun onConnect(connection: FlipperConnection?) {
         this.connection = connection
-        id = 0
-        val f = Toothpick::class.staticProperties.find { it.name == "MAP_KEY_TO_SCOPE" }
-        f?.let {
-            it.isAccessible = true
-            val w = it.get() as ConcurrentHashMap<Object, Scope>
-            w.filter { it.value.isRootScope }.toList().let { it[0] }.let { (obj, scope) ->
-                val flipperObject = getFlipperObjectFromScope(scope, getNextId())
-                Log.v("@@", flipperObject.toJsonString())
-                connection?.send("newData", flipperObject)
+        nodeId = 0
+        Toothpick::class
+            .staticProperties
+            .find { it.name == "MAP_KEY_TO_SCOPE" }
+            ?.let { prop ->
+                prop.isAccessible = true
+                val mapKeyToScope = prop.get() as ConcurrentHashMap<*, Scope>
+                mapKeyToScope
+                    .filter { it.value.isRootScope }
+                    .toList()
+                    .let { it[0] }
+                    .let { (_, scope) ->
+                        val flipperObject = getFlipperObjectFromScope(scope, getNextId())
+                        Log.v("KtpFlipperPlugin", flipperObject.toJsonString())
+                        connection?.send("newData", flipperObject)
+                    }
             }
-        }
     }
 
     override fun onDisconnect() {
@@ -56,21 +63,25 @@ class KtpFlipperPlugin : FlipperPlugin {
     // HELPER
     ///////////////////////////////////////////////////////////////////////////
 
-    var id = 0
 
     private fun getNextId(): Int {
-        return id.also { id++ }
+        return nodeId.also { nodeId++ }
     }
 
     private fun getFlipperObjectFromScope(scope: Scope, id: Int): FlipperObject {
         return FlipperObject.Builder()
             .put("key", id)
             .put("title", scope.name.toString())
-            .put("icon", getAndtTreeIcon(scope))
+            .put("icon", getAndTreeIcon(scope))
             .apply {
                 if (scope.childrenScopes.isNotEmpty()) {
                     put("children", scope.childrenScopes.let {
-                        it.toList().mapIndexed { index, (obj, scope) -> getFlipperObjectFromScope(scope, getNextId()) }
+                        it.toList().mapIndexed { index, (obj, scope) ->
+                            getFlipperObjectFromScope(
+                                scope,
+                                getNextId()
+                            )
+                        }
                             .toList()
                             .let {
                                 val arr = FlipperArray.Builder()
@@ -81,15 +92,24 @@ class KtpFlipperPlugin : FlipperPlugin {
                 }
                 if (scope.mapClassesToNamedScopedProviders.isNotEmpty()) {
                     put("namedScopedCount", scope.mapClassesToNamedScopedProviders.count())
-                    put("namedScoped", getProviders(scope.mapClassesToNamedScopedProviders.keys.toList()))
+                    put(
+                        "namedScoped",
+                        getProviders(scope.mapClassesToNamedScopedProviders.keys.toList())
+                    )
                 }
                 if (scope.mapClassesToUnNamedScopedProviders.isNotEmpty()) {
                     put("unNamedScopedCount", scope.mapClassesToUnNamedScopedProviders.count())
-                    put("unNamedScoped", getProviders(scope.mapClassesToUnNamedScopedProviders.keys.toList()))
+                    put(
+                        "unNamedScoped",
+                        getProviders(scope.mapClassesToUnNamedScopedProviders.keys.toList())
+                    )
                 }
                 if (scope.mapClassesToUnNamedUnScopedProviders.isNotEmpty()) {
                     put("unNamedUnScopedCount", scope.mapClassesToUnNamedUnScopedProviders.count())
-                    put("unNamedUnScoped", getProviders(scope.mapClassesToUnNamedUnScopedProviders.keys.toList(),true))
+                    put(
+                        "unNamedUnScoped",
+                        getProviders(scope.mapClassesToUnNamedUnScopedProviders.keys.toList(), true)
+                    )
                 }
             }
             .build()
@@ -103,11 +123,13 @@ class KtpFlipperPlugin : FlipperPlugin {
                     this.put(
                         (it as Class<*>)
                             .toString()
-                            .let {
+                            .let { className ->
                                 if (filter) {
-                                    it.split(".", ignoreCase = true, limit = 0).last()
+                                    className
+                                        .split(".", ignoreCase = true, limit = 0)
+                                        .last()
                                 } else {
-                                    it
+                                    className
                                 }
                             }
                     )
@@ -116,7 +138,7 @@ class KtpFlipperPlugin : FlipperPlugin {
             .build()
     }
 
-    private fun getAndtTreeIcon(scope: Scope): String {
+    private fun getAndTreeIcon(scope: Scope): String {
         return when {
             scope.name.toString().contains("class toothpick.Toothpick", true) -> "<HomeOutlined />"
             scope.name.toString().contains("viewmodel", true) -> "<AndroidOutlined />"
@@ -130,9 +152,6 @@ class KtpFlipperPlugin : FlipperPlugin {
     // DOMAIN HELPER
     ///////////////////////////////////////////////////////////////////////////
 
-
-//scope::class.staticProperties.filter { it.name == "mapClassesToUnNamedUnScopedProviders"}.let { it.first() }.get()
-
     private inline val Scope.isRootScope: Boolean
         get() {
             return this == this.rootScope
@@ -144,14 +163,12 @@ class KtpFlipperPlugin : FlipperPlugin {
         }
 
     // Parent
-
     private inline val Scope.parentName: String
         get() {
             return this.parentScope?.name.toString()
         }
 
     // Children
-
     private inline val Scope.childrenScopesCount: Int
         get() {
             return this.childrenScopes.count()
@@ -159,12 +176,13 @@ class KtpFlipperPlugin : FlipperPlugin {
 
     private inline val Scope.childrenScopes: ConcurrentHashMap<Any, Scope>
         get() {
-            return (this as ScopeNode).getPrivateProperty<ScopeNode, ConcurrentHashMap<Any, Scope>>("childrenScopes")
+            return (this as ScopeNode).getPrivateProperty<ScopeNode, ConcurrentHashMap<Any, Scope>>(
+                "childrenScopes"
+            )
                 ?: ConcurrentHashMap()
         }
 
     // Providers
-
     private inline val Scope.mapClassesToUnNamedUnScopedProviders: IdentityHashMap<Class<*>, InternalScopedProvider<*>>
         get() {
             return (this as ScopeImpl).getStaticProperty("mapClassesToUnNamedUnScopedProviders")
@@ -173,60 +191,23 @@ class KtpFlipperPlugin : FlipperPlugin {
 
     private inline val Scope.mapClassesToNamedScopedProviders: IdentityHashMap<Class<*>, Map<String, InternalScopedProvider<*>>>
         get() {
-            return (this as ScopeImpl).getPrivateProperty<ScopeImpl, IdentityHashMap<Class<*>, Map<String, InternalScopedProvider<*>>>>("mapClassesToNamedScopedProviders")
+            return (this as ScopeImpl).getPrivateProperty<ScopeImpl, IdentityHashMap<Class<*>, Map<String, InternalScopedProvider<*>>>>(
+                "mapClassesToNamedScopedProviders"
+            )
                 ?: IdentityHashMap()
         }
 
     private inline val Scope.mapClassesToUnNamedScopedProviders: IdentityHashMap<Class<*>, InternalScopedProvider<*>>
         get() {
-            return (this as ScopeImpl).getPrivateProperty<ScopeImpl, IdentityHashMap<Class<*>, InternalScopedProvider<*>>>("mapClassesToUnNamedScopedProviders")
+            return (this as ScopeImpl).getPrivateProperty<ScopeImpl, IdentityHashMap<Class<*>, InternalScopedProvider<*>>>(
+                "mapClassesToUnNamedScopedProviders"
+            )
                 ?: IdentityHashMap()
         }
 
-//            /*@VisibleForTesting */ static final IdentityHashMap<Class, InternalProvider>
-//    mapClassesToUnNamedUnScopedProviders = new IdentityHashMap<>();
-//
-//    /*
-//     * These 2 maps contain the internal bindings / providers specific to a scope.
-//     */
-//    /*@VisibleForTesting */ final IdentityHashMap<Class, Map<String, InternalScopedProvider>>
-//    mapClassesToNamedScopedProviders = new IdentityHashMap<>();
-//    /*@VisibleForTesting */ final IdentityHashMap<Class, InternalScopedProvider>
-//    mapClassesToUnNamedScopedProviders = new IdentityHashMap<>();
-
-//    private inline val ScopeNode.childrenScopes: ConcurrentHashMap<Any, Scope>
-//        get() {
-//            return this.getPrivateProperty<ScopeNode, ConcurrentHashMap<Any, Scope>>("childrenScopes")
-//                    ?: ConcurrentHashMap()
-//        }
-
-//    private inline val Scope.unNamedProviderCount: Int
-//        get() {
-//            return (this as ScopeImpl).class.staticPropertiesy<Scope, List<JvmType.Object>>("unNamedProviders")?.size
-//                    ?: 0
-//        }
-
-//    private inline val Scope.unNamedProviderCount: List<Any>
-//        get() {
-//            return (this as ScopeImpl).class.staticProperties
-//        }
-
-
-//    private inline val Scope.namedProviderCount: Int
-//        get() {
-//            return this.getPrivateProperty<Scope, List<JvmType.Object>>("namedProviders")?.size ?: 0
-//        }
-
     ///////////////////////////////////////////////////////////////////////////
-    // HELPER
+    // REFLEXION HELPER
     ///////////////////////////////////////////////////////////////////////////
-
-//    inline fun <reified T> T.callPrivateFunc(name: String, vararg args: Any?): Any? =
-//            T::class
-//                    .declaredMemberFunctions
-//                    .firstOrNull { it.name == name }
-//                    ?.apply { isAccessible = true }
-//                    ?.call(this, *args)
 
     private inline fun <reified T : Any, R> T.getPrivateProperty(name: String): R? =
         T::class

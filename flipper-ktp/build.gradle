@@ -5,7 +5,7 @@ plugins {
 
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.github.afaucogney'
+group = 'com.github.afaucogney'
 
 android {
     compileSdkVersion 30
@@ -33,6 +33,22 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    libraryVariants.all { variant ->
+        if (variant.buildType.name == "release") {
+            variant.outputs.all { output ->
+                def filePrefix = "$buildDir/outputs/aar/flipper-ktp"
+                def fileSuffix = "aar"
+                def originalFile = file("$filePrefix-${variant.buildType.name}.$fileSuffix")
+                def renamedFile = "$filePrefix-${variant.buildType.name}-${project.android.defaultConfig.versionName}.$fileSuffix"
+                tasks.named("assemble").configure {
+                    doLast {
+                        originalFile.renameTo(renamedFile)
+                    }
+                }
+            }
+        }
+    }
 }
 
 dependencies {
@@ -51,3 +67,4 @@ dependencies {
     implementation deps.flipper_soloader
     implementation deps.flipper_reflect
 }
+
