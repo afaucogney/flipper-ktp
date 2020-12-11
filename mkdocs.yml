@@ -16,7 +16,7 @@ extra:
 
 site_name: Flipper Ktp
 site_url: https://afaucogney.github.io/flipper-ktp/
-repo_name: Flipper
+repo_name: Flipper-Ktp
 repo_url: https://github.com/afaucogney/flipper-ktp
 edit_uri: edit/main/docs/
 site_description: "A flipper plugin to analyse Toothpick DI runtime scope tree"
@@ -33,7 +33,7 @@ theme:
     repo: fontawesome/brands/github
   favicon: 'images/logo.jpg'
   palette:
-    primary: 'deep-blue'
+    primary: 'light-blue'
     accent: 'deep-amber'
   features:
     - tabs
@@ -74,11 +74,11 @@ nav:
       - 'FAQ': faq.md
       - 'Support': support.md
       - 'Stack Overflow ⏏': https://stackoverflow.com/questions/tagged/toothpick-di?sort=active
-      - 'Contributing':
+  - 'Contributing':
 #          - 'Code of Conduct': code_of_conduct.md
-          - 'Dev Environment': dev-env.md
-          - 'Releasing': releasing.md
-          - 'How to help': how_to_help.md
-#  - 'Flipper Ktp Api':
-#      - 'KtpFlipperPlugin': api/leakcanary-android-core/leakcanary/index.md
+      - 'Dev Environment': dev-env.md
+      - 'Releasing': releasing.md
+      - 'How to help': how_to_help.md
+  - 'Flipper Ktp Api':
+      - 'KtpFlipperPlugin': api/flipper-ktp/index.md
   - 'Change Log': changelog.md
