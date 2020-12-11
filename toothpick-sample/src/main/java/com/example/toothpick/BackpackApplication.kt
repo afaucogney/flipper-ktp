@@ -17,6 +17,10 @@ import toothpick.ktp.KTP
 import toothpick.ktp.binding.bind
 import toothpick.ktp.binding.module
 
+
+/**
+ * BackpackApplication demonstrate usage of Ktp with KtpFlipperPlugin
+ */
 class BackpackApplication : Application() {
 
     lateinit var scope: Scope
@@ -29,12 +33,18 @@ class BackpackApplication : Application() {
                     bind<Application>().toInstance { this@BackpackApplication }
                 })
 
+        /**
+         * Initialisation of Flipper
+         */
         if (BuildConfig.DEBUG) {
             SoLoader.init(this, false)
             if (FlipperUtils.shouldEnableFlipper(this)) {
                 val client: FlipperClient = AndroidFlipperClient.getInstance(this)
                 with(client) {
                     addPlugin(InspectorFlipperPlugin(this@BackpackApplication, DescriptorMapping.withDefaults()))
+                    /**
+                     * initialisation of KtpFlipperPlugin with its default constructor
+                     */
                     addPlugin(KtpFlipperPlugin())
                     start()
                 }

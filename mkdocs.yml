@@ -1,0 +1,84 @@
+# pip install mkdocs mkdocs-material
+# mkdocs serve
+# mkdocs gh-deploy
+
+extra:
+  flipper_ktp:
+    release: '0.1.0'
+    next_release: '0.1.1'
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/afaucogney
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/afaucogney
+    - icon: fontawesome/brands/stack-overflow
+      link: https://stackoverflow.com/questions/tagged/toothpick-di?sort=active
+
+site_name: Flipper Ktp
+site_url: https://afaucogney.github.io/flipper-ktp/
+repo_name: Flipper-Ktp
+repo_url: https://github.com/afaucogney/flipper-ktp
+edit_uri: edit/main/docs/
+site_description: "A flipper plugin to analyse Toothpick DI runtime scope tree"
+site_author: Anthony FAUCOGNET
+remote_branch: gh-pages
+
+copyright: 'Copyright &copy; 2020 Anthony Faucogney'
+
+theme:
+  name: 'material'
+  custom_dir: 'docs/theme'
+  logo: 'images/logo.jpg'
+  icon:
+    repo: fontawesome/brands/github
+  favicon: 'images/logo.jpg'
+  palette:
+    primary: 'light-blue'
+    accent: 'deep-amber'
+  features:
+    - tabs
+
+markdown_extensions:
+  - smarty
+  - codehilite:
+      guess_lang: false
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.emoji
+  - tables
+  - admonition
+
+plugins:
+  - search
+  - markdownextradata: {}
+
+nav:
+  - 'Overview': index.md
+  - 'Getting Started': getting_started.md
+  - 'Fundamentals':
+      - 'Introduction': fundamentals.md
+      - 'How Flipper works': fundamentals-how-flipper-works.md
+      - 'How Ktp works': fundamentals-how-ktp-works.md
+      - 'How Flipper-Ktp works': fundamentals-how-flipper-ktp-works.md
+  - 'Help & Community':
+      - 'Code recipes': recipes.md
+      - 'FAQ': faq.md
+      - 'Support': support.md
+      - 'Stack Overflow ⏏': https://stackoverflow.com/questions/tagged/toothpick-di?sort=active
+  - 'Contributing':
+#          - 'Code of Conduct': code_of_conduct.md
+      - 'Dev Environment': dev-env.md
+      - 'Releasing': releasing.md
+      - 'How to help': how_to_help.md
+  - 'Flipper Ktp Api':
+      - 'KtpFlipperPlugin': api/flipper-ktp/index.md
+  - 'Change Log': changelog.md

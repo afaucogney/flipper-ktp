@@ -2,12 +2,14 @@ WIP
 
 [![Download](https://jitpack.io/v/afaucogney/flipper-ktp.svg)](https://jitpack.io/#afaucogney/flipper-ktp)
 
-Android KTP (Kotlin [Toothpick](https://github.com/stephanenicolas/toothpick)) driver for [Flipper](https://github.com/facebook/flipper).
+Android Ktp (Kotlin [Toothpick](https://github.com/stephanenicolas/toothpick)) driver for [Flipper](https://github.com/facebook/flipper).
 
 Download
-========
-* Configure [Flipper](https://fbflipper.com/docs/getting-started.html)
-* Top level gradle:
+--------
+
+- Configure [Flipper](https://fbflipper.com/docs/getting-started.html)
+- Top level gradle:
+
 ```kotlin
 allprojects {
     repositories {
@@ -18,14 +20,16 @@ allprojects {
 
 }
 ```
-* Dependency:
+- Dependency:
 
 Toothpick >= 3.1.0:
+
 ```kotlin
 implementation 'com.github.afaucogney:flipper-ktp:master-SNAPSHOT'
 ```
-```
-* Instantiate and add plugin to the FlipperClient. 
+
+- Instantiate and add plugin to the FlipperClient. 
+
 ```kotlin
 val client: FlipperClient = AndroidFlipperClient.getInstance(this)
 with(client) {
@@ -36,20 +40,38 @@ with(client) {
 ```
 
 Usage
-=====
+-----
+
 Open Flipper app and enable Ktp plugin
 
-<img src="art/flipper-plugin-ktp.png" width="512" />
+<img src="docs/images/screenshot-0.1.png" />
 
 Features
-========
-* Displaying runtime scope tree
-* Displaying scope names
-* Displaying scope name
+--------
 
-Currently the plugin does'nt refresh in case of KTP scope tree change. You have to update it manually
-going to another plugin and coming back. 
+- Displaying runtime scope tree
+- Displaying scope names
+- Displaying bindings by scope
 
+Currently the plugin doesn't refresh in case of KTP scope tree change. You have to update it manually going to another plugin and coming back. 
+
+Credits
+-------
+
+- [Toothpick](https://github.com/stephanenicolas/toothpick) - As target for this plugin but also for the repo structure.
+- [LeakCanary](https://github.com/square/leakcanary) - For its great documentation structure and process, that I almost copy.
+- [Flipper](https://github.com/facebook/flipper) - For supporting mobile devs by offering a great mobile app analysis tool.
+- [Flipper-Realm-Android](https://github.com/kamgurgul/Flipper-Realm) - For the idea to build a simple plugin.
+
+Background
+----------
+
+This seems to maybe an overkill repo for just a the [KtpFlipperPlugin](flipper-ktp/src/main/java/fr/afaucogney/mobile/flipper/KtpFlipperPlugin.kt) class, but it has been for me the chance to build my first android library with a state-of-the-art documentation. 
+
+Blagounette
+-----------
+
+<img src="docs/images/Dolphin-Automatic-Toothpick-Holder.gif"  height="512" class="center"/>
 
 License
 -------

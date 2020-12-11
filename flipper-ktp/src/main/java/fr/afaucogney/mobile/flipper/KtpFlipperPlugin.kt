@@ -12,7 +12,14 @@ import kotlin.reflect.full.memberProperties
 import kotlin.reflect.full.staticProperties
 import kotlin.reflect.jvm.isAccessible
 
-
+/**
+ * A Flipper Plugin for Ktp.
+ *
+ * KtpFlipperPlugin is a plugin for [Flipper]("https://fbflipper.com/") to analyse [Toothpick-di](https://github.com/stephanenicolas/toothpick) (aka KTP) runtime app scope tree.
+ * @constructor Create a default KtpFlipperPlugin instance
+ * @since 0.1.0
+ * @author Anthony FAUCOGNEY
+ */
 class KtpFlipperPlugin : FlipperPlugin {
 
     ///////////////////////////////////////////////////////////////////////////
@@ -20,16 +27,28 @@ class KtpFlipperPlugin : FlipperPlugin {
     ///////////////////////////////////////////////////////////////////////////
 
     private var connection: FlipperConnection? = null
+
+    /**
+     * NodeId is reset at every connection.
+     */
     private var nodeId = 0
 
     ///////////////////////////////////////////////////////////////////////////
     // SPECIALIZATION
     ///////////////////////////////////////////////////////////////////////////
 
+    /**
+     * Setup the unique id of the plugin
+     */
     override fun getId(): String {
         return "KtpFlipper"
     }
 
+    /**
+     * onConnect is triggered every time the plugin is shown on Flipper
+     * It does keep the connection
+     * And parse Ktp scope tree to then push it to the Desktop Flipper Client
+     */
     override fun onConnect(connection: FlipperConnection?) {
         this.connection = connection
         nodeId = 0
@@ -51,10 +70,17 @@ class KtpFlipperPlugin : FlipperPlugin {
             }
     }
 
+    /**
+     * Release the connection
+     */
     override fun onDisconnect() {
         connection = null
     }
 
+
+    /**
+     * Plugin doesn't run in background
+     */
     override fun runInBackground(): Boolean {
         return false
     }
@@ -62,7 +88,6 @@ class KtpFlipperPlugin : FlipperPlugin {
     ///////////////////////////////////////////////////////////////////////////
     // HELPER
     ///////////////////////////////////////////////////////////////////////////
-
 
     private fun getNextId(): Int {
         return nodeId.also { nodeId++ }
