@@ -1,4 +1,4 @@
-name: ci
+name: mkdocs-pages-ci
 on:
   push:
     branches:
@@ -11,6 +11,6 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: pip install markdownextradata
+      - run: pip install mkdocs-markdownextradata-plugin
       - run: pip install mkdocs-material
       - run: mkdocs gh-deploy --force
