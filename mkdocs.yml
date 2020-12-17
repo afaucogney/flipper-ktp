@@ -2,41 +2,41 @@
 # mkdocs serve
 # mkdocs gh-deploy
 
-extra:
-  flipper_ktp:
-    release: '0.1.0'
-    next_release: '0.1.1'
-  social:
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/afaucogney
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/afaucogney
-    - icon: fontawesome/brands/stack-overflow
-      link: https://stackoverflow.com/questions/tagged/toothpick-di?sort=active
+# extra:
+#   flipper_ktp:
+#     release: '0.1.0'
+#     next_release: '0.1.1'
+#   social:
+#     - icon: fontawesome/brands/github-alt
+#       link: https://github.com/afaucogney
+#     - icon: fontawesome/brands/twitter
+#       link: https://twitter.com/afaucogney
+#     - icon: fontawesome/brands/stack-overflow
+#       link: https://stackoverflow.com/questions/tagged/toothpick-di?sort=active
 
 site_name: Flipper Ktp
 site_url: https://afaucogney.github.io/flipper-ktp/
-repo_name: Flipper-Ktp
-repo_url: https://github.com/afaucogney/flipper-ktp
-edit_uri: edit/main/docs/
-site_description: "A flipper plugin to analyse Toothpick DI runtime scope tree"
-site_author: Anthony FAUCOGNET
-remote_branch: gh-pages
+# repo_name: Flipper-Ktp
+# repo_url: https://github.com/afaucogney/flipper-ktp
+# edit_uri: edit/main/docs/
+# site_description: "A flipper plugin to analyse Toothpick DI runtime scope tree"
+# site_author: Anthony FAUCOGNET
+# remote_branch: gh-pages
 
-copyright: 'Copyright &copy; 2020 Anthony Faucogney'
+# copyright: 'Copyright &copy; 2020 Anthony Faucogney'
 
 theme:
   name: 'material'
-  custom_dir: 'docs/theme'
-  logo: 'images/logo.jpg'
-  icon:
-    repo: fontawesome/brands/github
-  favicon: 'images/logo.jpg'
-  palette:
-    primary: 'light-blue'
-    accent: 'deep-amber'
-  features:
-    - tabs
+#   custom_dir: 'docs/theme'
+#   logo: 'images/logo.jpg'
+#   icon:
+#     repo: fontawesome/brands/github
+#   favicon: 'images/logo.jpg'
+#   palette:
+#     primary: 'light-blue'
+#     accent: 'deep-amber'
+#   features:
+#     - tabs
 
 #markdown_extensions:
 #  - smarty
