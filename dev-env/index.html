@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Dev Environment for LeakCanary contributors - Flipper Ktp</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Dev Environment for LeakCanary contributors";
+    var mkdocs_page_input_path = "dev-env.md";
+    var mkdocs_page_url = "/flipper-ktp/dev-env/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Flipper Ktp</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="..">Overview</a>
+  </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Flipper Ktp</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Dev Environment for LeakCanary contributors</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="dev-environment-for-leakcanary-contributors">Dev Environment for LeakCanary contributors</h1>
+<h2 id="setup">Setup</h2>
+<ul>
+<li>Download <a href="https://developer.android.com/studio">Android Studio</a>.</li>
+<li>We use two spaces code indentation, use <code>SquareAndroid</code> code style settings from https://github.com/square/java-code-styles.</li>
+<li>Build with <code>./gradlew build</code>.</li>
+<li>Running the failing UI tests to confirm leak detection correctly fails UI tests: <code>./gradlew leakcanary-android-sample:connectedCheck</code>.</li>
+<li>Normal UI tests: <code>./gradlew leakcanary-android-core:connectedCheck</code>.</li>
+</ul>
+<h2 id="static-code-analysis">Static Code Analysis</h2>
+<ul>
+<li>LeakCanary <a href="https://github.com/square/leakcanary/pull/1535">uses</a> <a href="https://arturbosch.github.io/detekt/">Detekt</a> for static Code analysis.</li>
+<li>Analyze the entire project with <code>./gradlew check</code> or particular modules with <code>./gradlew :module-name:check</code>. Detekt will fail the build if any ruleset violations are found. <strong>You should fix all issues before pushing the branch to remote</strong>.</li>
+<li>There's also a <strong>git pre-push</strong> hook that will run analysis automatically before pushing a branch to the remote. If there are any violations - it will prevent the push. Fix the issues!</li>
+<li>You can bypass the git hook though; Travis CI will still run checks and will fail if any violations are found. </li>
+<li>Detekt report will be printed in the console and saved to <code>/moduleDir/build/reports/</code>.</li>
+</ul>
+<h2 id="deploying-locally">Deploying locally</h2>
+<p>To deploy LeakCanary to your local maven repository, run the following command, changing the path to the path of your local repository:</p>
+<pre><code>./gradlew uploadArchives -PSNAPSHOT_REPOSITORY_URL=file:///Users/py/.m2/repository
+</code></pre>
+<p>Then add the SNAPSHOT dependency and <code>mavenLocal()</code> repository to your project:</p>
+<pre><code class="language-gradle">dependencies {
+  debugImplementation 'com.squareup.leakcanary:leakcanary-android:{{ flipper_ktp.next_release }}-SNAPSHOT'
+}
+
+repositories {
+  mavenLocal()
+}
+</code></pre>
+<h2 id="deploying-the-docs-locally">Deploying the docs locally</h2>
+<p>Installing the markdownextradata plugin:</p>
+<pre><code>pip install mkdocs-markdownextradata-plugin
+</code></pre>
+<p>Deploying locally</p>
+<pre><code>mkdocs serve
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

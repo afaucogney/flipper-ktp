@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Releasing LeakCanary - Flipper Ktp</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Releasing LeakCanary";
+    var mkdocs_page_input_path = "releasing.md";
+    var mkdocs_page_url = "/flipper-ktp/releasing/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Flipper Ktp</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="..">Overview</a>
+  </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Flipper Ktp</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Releasing LeakCanary</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="releasing-leakcanary">Releasing LeakCanary</h1>
+<ul>
+<li>Make sure you have the docsite Google Analytics key set up in your <code>~/.bashrc</code>:</li>
+</ul>
+<pre><code>export LEAKCANARY_GOOGLE_ANALYTICS_KEY=&quot;UA-_________&quot;
+</code></pre>
+<ul>
+<li>Create a local release branch from <code>main</code></li>
+</ul>
+<pre><code>git checkout main
+git pull
+git checkout -b release_{{ flipper_ktp.next_release }}
+</code></pre>
+<ul>
+<li>Update <code>VERSION_NAME</code> in <code>gradle.properties</code> (remove <code>-SNAPSHOT</code>)</li>
+</ul>
+<pre><code class="language-gradle">VERSION_NAME={{ flipper_ktp.next_release }}
+</code></pre>
+<ul>
+<li>Update the current version and next version in <code>mkdocs.yml</code>:</li>
+</ul>
+<pre><code>extra:
+  flipper_ktp:
+    release: '{{ flipper_ktp.next_release }}'
+    next_release: 'REPLACE_WITH_NEXT_VERSION_NUMBER'
+</code></pre>
+<ul>
+<li>Generate the Dokka docs</li>
+</ul>
+<pre><code>rm -rf docs/api
+./gradlew leakcanary-android-core:dokka leakcanary-android-instrumentation:dokka leakcanary-android-process:dokka leakcanary-object-watcher-android:dokka leakcanary-object-watcher:dokka shark-android:dokka shark-graph:dokka shark-hprof:dokka shark-log:dokka shark:dokka plumber-android:dokka
+</code></pre>
+<ul>
+<li>Confirm all API changes are intentional</li>
+</ul>
+<pre><code>git diff docs/api
+</code></pre>
+<ul>
+<li>Update <code>docs/changelog.md</code> after checking out all changes:<ul>
+<li>https://github.com/square/leakcanary/compare/v{{ flipper_ktp.release }}...main</li>
+</ul>
+</li>
+<li>Take one last look</li>
+</ul>
+<pre><code>git diff
+</code></pre>
+<ul>
+<li>Commit all local changes</li>
+</ul>
+<pre><code>git commit -am &quot;Prepare {{ flipper_ktp.next_release }} release&quot;
+</code></pre>
+<ul>
+<li>Perform a clean build</li>
+</ul>
+<pre><code>./gradlew clean
+./gradlew build
+</code></pre>
+<ul>
+<li>Create a tag and push it</li>
+</ul>
+<pre><code>git tag v{{ flipper_ktp.next_release }}
+git push origin v{{ flipper_ktp.next_release }}
+</code></pre>
+<ul>
+<li>Make sure you have valid credentials in <code>~/.gradle/gradle.properties</code> to upload the artifacts</li>
+</ul>
+<pre><code>SONATYPE_NEXUS_USERNAME=
+SONATYPE_NEXUS_PASSWORD=
+</code></pre>
+<ul>
+<li>Upload the artifacts to Sonatype OSS Nexus</li>
+</ul>
+<pre><code>./gradlew uploadArchives --no-daemon --no-parallel
+</code></pre>
+<ul>
+<li>Generate the CLI zip</li>
+</ul>
+<pre><code>./gradlew shark-cli:distZip
+</code></pre>
+<ul>
+<li>Release to Maven Central<ul>
+<li>Login to Sonatype OSS Nexus: https://oss.sonatype.org/</li>
+<li>Click on <strong>Staging Repositories</strong></li>
+<li>Scroll to the bottom, you should see an entry named <code>comsquareup-XXXX</code></li>
+<li>Check the box next to the <code>comsquareup-XXXX</code> entry, click <strong>Close</strong> then <strong>Confirm</strong></li>
+<li>Wait a bit, hit <strong>Refresh</strong>, until the <em>Status</em> for that column changes to <em>Closed</em>.</li>
+<li>Check the box next to the <code>comsquareup-XXXX</code> entry, click <strong>Release</strong> then <strong>Confirm</strong></li>
+</ul>
+</li>
+<li>Merge the release branch to main</li>
+</ul>
+<pre><code>git checkout main
+git pull
+git merge --no-ff release_{{ flipper_ktp.next_release }}
+</code></pre>
+<ul>
+<li>Update <code>VERSION_NAME</code> in <code>gradle.properties</code> (increase version and add <code>-SNAPSHOT</code>)</li>
+</ul>
+<pre><code class="language-gradle">VERSION_NAME=REPLACE_WITH_NEXT_VERSION_NUMBER-SNAPSHOT
+</code></pre>
+<ul>
+<li>Commit your changes</li>
+</ul>
+<pre><code>git commit -am &quot;Prepare for next development iteration&quot;
+</code></pre>
+<ul>
+<li>Push your changes</li>
+</ul>
+<pre><code>git push
+</code></pre>
+<ul>
+<li>Go to <a href="https://github.com/square/leakcanary/milestones">Milestones</a>, close the corresponding milestones and create a new milestone.</li>
+<li>Wait for the release to be available <a href="https://repo1.maven.org/maven2/com/squareup/leakcanary/leakcanary-android/">on Maven Central</a>.</li>
+<li>Redeploy the docs: <code>mkdocs serve</code> to check locally, <code>mkdocs gh-deploy</code> to deploy.</li>
+<li>Go to the <a href="https://github.com/square/leakcanary/releases/new">Draft a new release</a> page, enter the release name (v{{ flipper_ktp.next_release }}) as tag and title, and have the description point to the changelog. You can find the direct anchor URL from the <a href="https://square.github.io/leakcanary/changelog">Change Log</a> page on the doc site.</li>
+</ul>
+<pre><code>See [Change Log](https://square.github.io/leakcanary/changelog#version-20-alpha-2-2019-05-21)
+</code></pre>
+<ul>
+<li>Add the CLIP zip from <code>shark-cli/build/distributions/</code> to the release.</li>
+<li>Make a pull request to <a href="https://brew.sh/">brew</a>. Just execute </li>
+</ul>
+<pre><code class="language-bash">brew bump-formula-pr --url https://github.com/square/leakcanary/releases/download/v{{ flipper_ktp.next_release }}/shark-cli-{{ flipper_ktp.next_release }}.zip leakcanary-shark
+</code></pre>
+<p>(The url parameter should point at zip from this new release). <br />
+In case of problems, read <a href="https://docs.brew.sh/How-To-Open-a-Homebrew-Pull-Request">brew docs</a>.<br />
+* Tell your friends, update all of your apps, and tweet the new release. As a nice extra touch, mention external contributions.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
