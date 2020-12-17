@@ -38,47 +38,47 @@ theme:
   features:
     - tabs
 
-markdown_extensions:
-  - smarty
-  - codehilite:
-      guess_lang: false
-  - footnotes
-  - meta
-  - toc:
-      permalink: true
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.inlinehilite
-  - pymdownx.magiclink
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.emoji
-  - tables
-  - admonition
-
-plugins:
-  - search
-  - markdownextradata: {}
+#markdown_extensions:
+#  - smarty
+#  - codehilite:
+#      guess_lang: false
+#  - footnotes
+#  - meta
+#  - toc:
+#      permalink: true
+#  - pymdownx.betterem:
+#      smart_enable: all
+#  - pymdownx.caret
+#  - pymdownx.inlinehilite
+#  - pymdownx.magiclink
+#  - pymdownx.smartsymbols
+#  - pymdownx.superfences
+#  - pymdownx.emoji
+#  - tables
+#  - admonition
+#
+#plugins:
+#  - search
+#  - markdownextradata: {}
 
 nav:
   - 'Overview': index.md
-  - 'Getting Started': getting_started.md
-  - 'Fundamentals':
-      - 'Introduction': fundamentals.md
-      - 'How Flipper works': fundamentals-how-flipper-works.md
-      - 'How Ktp works': fundamentals-how-ktp-works.md
-      - 'How Flipper-Ktp works': fundamentals-how-flipper-ktp-works.md
-  - 'Help & Community':
-      - 'Code recipes': recipes.md
-      - 'FAQ': faq.md
-      - 'Support': support.md
-      - 'Stack Overflow ⏏': https://stackoverflow.com/questions/tagged/toothpick-di?sort=active
-  - 'Contributing':
-#          - 'Code of Conduct': code_of_conduct.md
-      - 'Dev Environment': dev-env.md
-      - 'Releasing': releasing.md
-      - 'How to help': how_to_help.md
-  - 'Flipper Ktp Api':
-      - 'KtpFlipperPlugin': api/flipper-ktp/index.md
-  - 'Change Log': changelog.md
+#  - 'Getting Started': getting_started.md
+#  - 'Fundamentals':
+#      - 'Introduction': fundamentals.md
+#      - 'How Flipper works': fundamentals-how-flipper-works.md
+#      - 'How Ktp works': fundamentals-how-ktp-works.md
+#      - 'How Flipper-Ktp works': fundamentals-how-flipper-ktp-works.md
+#  - 'Help & Community':
+#      - 'Code recipes': recipes.md
+#      - 'FAQ': faq.md
+#      - 'Support': support.md
+#      - 'Stack Overflow ⏏': https://stackoverflow.com/questions/tagged/toothpick-di?sort=active
+#  - 'Contributing':
+##          - 'Code of Conduct': code_of_conduct.md
+#      - 'Dev Environment': dev-env.md
+#      - 'Releasing': releasing.md
+#      - 'How to help': how_to_help.md
+#  - 'Flipper Ktp Api':
+#      - 'KtpFlipperPlugin': api/flipper-ktp/index.md
+#  - 'Change Log': changelog.md
