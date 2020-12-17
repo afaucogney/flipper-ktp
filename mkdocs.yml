@@ -26,7 +26,8 @@ site_url: https://afaucogney.github.io/flipper-ktp/
 # copyright: 'Copyright &copy; 2020 Anthony Faucogney'
 
 theme:
-  name: 'material'
+#   name: 'material'
+  name: 'rtd-dropdown'
 #   custom_dir: 'docs/theme'
 #   logo: 'images/logo.jpg'
 #   icon:
