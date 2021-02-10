@@ -17,12 +17,11 @@ allprojects {
     	maven { url 'https://jitpack.io' }
 		}
 	}
-
 }
 ```
 - Dependency:
 
-Toothpick >= 3.1.0:
+Toothpick > 3.1.0: It does work on latest Snapshot
 
 ```kotlin
 implementation 'com.github.afaucogney:flipper-ktp:master-SNAPSHOT'
@@ -53,7 +52,7 @@ Features
 - Displaying scope names
 - Displaying bindings by scope
 
-Currently the plugin doesn't refresh in case of KTP scope tree change. You have to update it manually going to another plugin and coming back. 
+The plugin refresh automaticaly in case of KTP scope tree change. 
 
 Credits
 -------
@@ -72,6 +71,17 @@ Blagounette
 -----------
 
 <img src="docs/images/Dolphin-Automatic-Toothpick-Holder.gif"  height="512" class="center"/>
+
+ToDo
+-------
+
+- [ ] Fix snapshot version
+- [ ] See if just only tp-runtime is enough to extend
+- [ ] See if default tree componebt is better for the main view
+- [ ] Embed  Desktop code to this repo
+- [ ] Give video / example
+- [ ] Explain why is super more powerfull than debugger
+- [ ] Update setup readme 
 
 License
 -------
