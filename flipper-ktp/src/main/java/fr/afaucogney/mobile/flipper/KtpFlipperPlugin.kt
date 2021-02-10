@@ -51,6 +51,25 @@ class KtpFlipperPlugin : FlipperPlugin {
      */
     override fun onConnect(connection: FlipperConnection?) {
         this.connection = connection
+        refresh()
+    }
+
+    /**
+     * Release the connection
+     */
+    override fun onDisconnect() {
+        connection = null
+    }
+
+
+    /**
+     * Plugin doesn't run in background
+     */
+    override fun runInBackground(): Boolean {
+        return false
+    }
+
+    fun refresh() {
         nodeId = 0
         Toothpick::class
             .staticProperties
@@ -68,21 +87,6 @@ class KtpFlipperPlugin : FlipperPlugin {
                         connection?.send("newData", flipperObject)
                     }
             }
-    }
-
-    /**
-     * Release the connection
-     */
-    override fun onDisconnect() {
-        connection = null
-    }
-
-
-    /**
-     * Plugin doesn't run in background
-     */
-    override fun runInBackground(): Boolean {
-        return false
     }
 
     ///////////////////////////////////////////////////////////////////////////

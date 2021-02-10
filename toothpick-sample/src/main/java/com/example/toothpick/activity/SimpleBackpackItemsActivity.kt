@@ -69,7 +69,7 @@ class SimpleBackpackItemsActivity : AppCompatActivity() {
                 bind<IBackpackAdapter>().toClass<BackpackAdapter>()
                 bind<Backpack>().singleton()
             })
-            .closeOnDestroy(this)
+//            .closeOnDestroy(this)
             .inject(this)
     }
 
@@ -86,6 +86,11 @@ class SimpleBackpackItemsActivity : AppCompatActivity() {
         }
     }
 
+
+    override fun onDestroy() {
+        KTP.closeScope(this)
+        super.onDestroy()
+    }
 
     private fun setupUIComponents() {
         setContentView(R.layout.backpack_list)

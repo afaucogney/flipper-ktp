@@ -25,13 +25,10 @@ class BackpackApplication : Application() {
 
     lateinit var scope: Scope
 
+    private val ktpFlipperPlugin = KtpFlipperPlugin()
+
     override fun onCreate() {
         super.onCreate()
-
-        scope = KTP.openScope(ApplicationScope::class.java)
-                .installModules(module {
-                    bind<Application>().toInstance { this@BackpackApplication }
-                })
 
         /**
          * Initialisation of Flipper
@@ -41,19 +38,34 @@ class BackpackApplication : Application() {
             if (FlipperUtils.shouldEnableFlipper(this)) {
                 val client: FlipperClient = AndroidFlipperClient.getInstance(this)
                 with(client) {
-                    addPlugin(InspectorFlipperPlugin(this@BackpackApplication, DescriptorMapping.withDefaults()))
+                    addPlugin(
+                        InspectorFlipperPlugin(
+                            this@BackpackApplication,
+                            DescriptorMapping.withDefaults()
+                        )
+                    )
                     /**
                      * initialisation of KtpFlipperPlugin with its default constructor
                      */
-                    addPlugin(KtpFlipperPlugin())
+                    addPlugin(ktpFlipperPlugin)
                     start()
                 }
             }
+            KTP.ktpFlipperPluginListener = {
+                ktpFlipperPlugin.refresh()
+            }
         }
+
+        scope = KTP.openScope(ApplicationScope::class.java)
+            .installModules(module {
+                bind<Application>().toInstance { this@BackpackApplication }
+            })
+
     }
 
     override fun onTrimMemory(level: Int) {
         super.onTrimMemory(level)
         scope.release()
     }
+
 }

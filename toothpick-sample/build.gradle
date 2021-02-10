@@ -58,6 +58,10 @@ android {
     configurations.all {
         resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
     }
+
+    packagingOptions {
+        exclude 'META-INF/ktp.kotlin_module'
+    }
 }
 
 repositories {
@@ -69,10 +73,11 @@ repositories {
 
 dependencies {
     // TP
-    implementation deps.ktp
+//    releaseImplementation deps.ktp
+    implementation project(':ktp-flipper')
     implementation deps.tp_androidx
-    implementation deps.tp_lifecycle_ktp
-    implementation deps.tp_viewmodel_ktp
+    implementation project(':smoothie-lifecycle-ktp-flipper')
+    implementation project(':smoothie-lifecycle-viewmodel-ktp-flipper')
     kapt deps.tp_compiler
 
     // Android X
@@ -89,6 +94,7 @@ dependencies {
     implementation deps.flipper_core
     implementation deps.flipper_soloader
     implementation deps.flipper_reflect
+    implementation project(':flipper-ktp')
 
     // Testing
     testRuntimeOnly deps.junit5_engine
@@ -98,7 +104,4 @@ dependencies {
     testImplementation deps.kluent
     testImplementation deps.truth
     testImplementation deps.tp_testing_junit5
-
-    implementation project(':flipper-ktp')
-//    implementation 'com.github.afaucogney:flipper-ktp:master-SNAPSHOT'
 }

@@ -1,2 +1,9 @@
-include ':flipper-ktp', ':toothpick-sample', ':ktp'
 rootProject.name = "Flipper Ktp"
+include ':ktp-flipper'
+
+include ':toothpick-runtime-flipper'
+include ':flipper-ktp'
+include ':smoothie-lifecycle-ktp-flipper'
+include ':smoothie-lifecycle-viewmodel-ktp-flipper'
+
+include ':toothpick-sample'

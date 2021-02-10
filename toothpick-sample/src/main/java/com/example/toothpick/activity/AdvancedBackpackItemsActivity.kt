@@ -83,7 +83,7 @@ class AdvancedBackpackItemsActivity : AppCompatActivity() {
             .installModules(module {
                 bind<IBackpackAdapter>().toClass<BackpackAdapter>()
             })
-            .closeOnDestroy(this)
+//            .closeOnDestroy(this)
             .inject(this)
     }
 
@@ -100,6 +100,10 @@ class AdvancedBackpackItemsActivity : AppCompatActivity() {
         }
     }
 
+    override fun onDestroy() {
+        KTP.closeScope(this)
+        super.onDestroy()
+    }
 
     private fun setupUIComponents() {
         setContentView(R.layout.backpack_list)

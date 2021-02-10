@@ -11,6 +11,7 @@ import com.example.toothpick.annotation.ApplicationScope;
 import com.example.toothpick.helper.BackpackItemValidator;
 import javax.inject.Inject;
 import toothpick.Toothpick;
+import toothpick.ktp.KTP;
 
 public class AddNewActivity extends AppCompatActivity {
 
@@ -26,7 +27,7 @@ public class AddNewActivity extends AppCompatActivity {
 
         // 1. Open Activity scope as child of Application scope
         // 2. Inject dependencies
-        Toothpick.openScopes(ApplicationScope.class, this)
+        KTP.INSTANCE.openScopes(ApplicationScope.class, this)
             .inject(this);
 
         setupUIComponents();
@@ -45,5 +46,11 @@ public class AddNewActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        KTP.INSTANCE.closeScope(this);
+        super.onDestroy();
     }
 }

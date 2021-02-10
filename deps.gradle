@@ -29,25 +29,23 @@ ext.deps = [// Common
             dokkaPlugin         : 'org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.17',
 
             // TP artifacts for composite builds
-            tp_smoothie         : 'com.github.stephanenicolas.toothpick:smoothie:3.1.0',
-            tp_androidx         : 'com.github.stephanenicolas.toothpick:smoothie-androidx:3.1.0',
-            tp_lifecycle        : 'com.github.stephanenicolas.toothpick:smoothie-lifecycle:3.1.0',
-            tp_lifecycle_ktp    : 'com.github.stephanenicolas.toothpick:smoothie-lifecycle-ktp:3.1.0',
-            tp_viewmodel        : 'com.github.stephanenicolas.toothpick:smoothie-lifecycle-viewmodel:3.1.0',
-            tp_viewmodel_ktp    : 'com.github.stephanenicolas.toothpick:smoothie-lifecycle-viewmodel-ktp:3.1.0',
-            tp_smoothie_support : 'com.github.stephanenicolas.toothpick:smoothie-support:3.1.0',
-            tp                  : 'com.github.stephanenicolas.toothpick:toothpick:3.1.0',
-            tp_runtime          : 'com.github.stephanenicolas.toothpick:toothpick-runtime:3.1.0',
-            ktp                 : 'com.github.stephanenicolas.toothpick:ktp:3.1.0',
-            tp_compiler         : 'com.github.stephanenicolas.toothpick:toothpick-compiler:3.1.0',
-            tp_testing          : 'com.github.stephanenicolas.toothpick:toothpick-testing:3.1.0',
-            tp_testing_junit4   : 'com.github.stephanenicolas.toothpick:toothpick-testing-junit4:3.1.0',
-            tp_testing_junit5   : 'com.github.stephanenicolas.toothpick:toothpick-testing-junit5:3.1.0',
+            tp_smoothie         : 'com.github.stephanenicolas.toothpick:smoothie:-SNAPSHOT',
+            tp_androidx         : 'com.github.stephanenicolas.toothpick:smoothie-androidx:-SNAPSHOT',
+            tp_lifecycle        : 'com.github.stephanenicolas.toothpick:smoothie-lifecycle:-SNAPSHOT',
+            tp_lifecycle_ktp    : 'com.github.stephanenicolas.toothpick:smoothie-lifecycle-ktp:-SNAPSHOT',
+            tp_viewmodel        : 'com.github.stephanenicolas.toothpick:smoothie-lifecycle-viewmodel:-SNAPSHOT',
+            tp_viewmodel_ktp    : 'com.github.stephanenicolas.toothpick:smoothie-lifecycle-viewmodel-ktp:-SNAPSHOT',
+            tp_smoothie_support : 'com.github.stephanenicolas.toothpick:smoothie-support:-SNAPSHOT',
+            tp                  : 'com.github.stephanenicolas.toothpick:toothpick:-SNAPSHOT',
+            tp_runtime          : 'com.github.stephanenicolas.toothpick:toothpick-runtime:-SNAPSHOT',
+            ktp                 : 'com.github.stephanenicolas.toothpick:ktp:-SNAPSHOT',
+            tp_compiler         : 'com.github.stephanenicolas.toothpick:toothpick-compiler:-SNAPSHOT',
+            tp_testing          : 'com.github.stephanenicolas.toothpick:toothpick-testing:-SNAPSHOT',
+            tp_testing_junit4   : 'com.github.stephanenicolas.toothpick:toothpick-testing-junit4:-SNAPSHOT',
+            tp_testing_junit5   : 'com.github.stephanenicolas.toothpick:toothpick-testing-junit5:-SNAPSHOT',
 
             // Flipper
-
-            // Flipper
-            flipper_core        : 'com.facebook.flipper:flipper:0.68.0',
+            flipper_core        : 'com.facebook.flipper:flipper:0.72.0',
             flipper_soloader    : 'com.facebook.soloader:soloader:0.9.0',
             flipper_reflect     : 'org.jetbrains.kotlin:kotlin-reflect:1.4.10',
 
