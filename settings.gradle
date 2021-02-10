@@ -1,2 +1,2 @@
-include ':flipper-ktp', ':toothpick-sample'
+include ':flipper-ktp', ':toothpick-sample', ':ktp'
 rootProject.name = "Flipper Ktp"
